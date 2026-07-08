@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Sketchware Pro Easy</string>
+    <string name="add_project">Nuevo Proyecto</string>
+    <string name="project_name">Nombre del Proyecto</string>
+    <string name="package_name">Nombre del Paquete</string>
+    <string name="create">Crear</string>
+    <string name="cancel">Cancelar</string>
+    <string name="no_projects">No hay proyectos aún. ¡Crea uno!</string>
+    <string name="design">Diseño</string>
+    <string name="logic">Lógica</string>
+    <string name="run">Ejecutar</string>
+</resources>
