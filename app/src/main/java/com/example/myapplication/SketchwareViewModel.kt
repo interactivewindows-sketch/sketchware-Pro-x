@@ -20,7 +20,7 @@ import java.util.UUID
 class SketchwareViewModel(application: Application) : AndroidViewModel(application) {
     private val gson = Gson()
     private val sharedPrefs = application.getSharedPreferences("sketchware_pro_x_prefs", Context.MODE_PRIVATE)
-    
+
     private val _basePath = MutableStateFlow(
         sharedPrefs.getString("base_path", File(Environment.getExternalStorageDirectory(), "SketchwareProX").absolutePath)!!
     )
@@ -38,10 +38,13 @@ class SketchwareViewModel(application: Application) : AndroidViewModel(applicati
     private val _error = MutableStateFlow<String?>(null)
     val error: StateFlow<String?> = _error.asStateFlow()
 
-    private val generativeModel = GenerativeModel(
-        modelName = "gemini-1.5-flash",
-        apiKey = "AQ.Ab8RN6IBqnzNbJCuge8Pnxavd8NfjS7xaeBsDyVLMo3-rkZYfA"
-    )
+    private val geminiApiKey = BuildConfig.GEMINI_API_KEY.ifBlank { null }
+    private val generativeModel = geminiApiKey?.let {
+        GenerativeModel(
+            modelName = "gemini-1.5-flash",
+            apiKey = it
+        )
+    }
 
     init {
         updateFolders()
@@ -83,8 +86,8 @@ class SketchwareViewModel(application: Application) : AndroidViewModel(applicati
     }
 
     fun addProject(
-        name: String, 
-        packageName: String, 
+        name: String,
+        packageName: String,
         versionName: String = "1.0",
         versionCode: Int = 1,
         colors: ProjectColors = ProjectColors()
@@ -114,7 +117,7 @@ class SketchwareViewModel(application: Application) : AndroidViewModel(applicati
         }
         saveProjects()
     }
-    
+
     fun updateProjectSWComponents(projectId: String, components: List<SWComponent>) {
         _projects.value = _projects.value.map {
             if (it.id == projectId) it.copy(nonVisualComponents = components) else it
@@ -172,6 +175,11 @@ class SketchwareViewModel(application: Application) : AndroidViewModel(applicati
     }
 
     fun generateProjectWithAI(prompt: String) {
+        if (generativeModel == null) {
+            _error.value = "No se detectó una clave Gemini válida. Configura GEMINI_API_KEY en local.properties."
+            return
+        }
+
         viewModelScope.launch {
             _isGenerating.value = true
             _error.value = null
@@ -182,8 +190,10 @@ class SketchwareViewModel(application: Application) : AndroidViewModel(applicati
                 if (text != null) {
                     val name = text.substringAfter("\"name\": \"").substringBefore("\"")
                     val pkg = text.substringAfter("\"package\": \"").substringBefore("\"")
-                    if (name.isNotEmpty() && name != text) {
+                    if (name.isNotEmpty() && pkg.isNotEmpty() && name != text) {
                         addProject(name, pkg)
+                    } else {
+                        _error.value = "La IA no devolvió un JSON válido."
                     }
                 }
             } catch (e: Exception) {

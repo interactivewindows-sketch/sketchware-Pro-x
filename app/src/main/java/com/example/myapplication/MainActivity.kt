@@ -24,14 +24,12 @@ import top.yukonga.miuix.kmp.theme.ColorSchemeMode
 import top.yukonga.miuix.kmp.theme.MiuixTheme
 import top.yukonga.miuix.kmp.theme.ThemeController
 import top.yukonga.miuix.kmp.theme.darkColorScheme
-import kotlin.random.Random
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val sharedPrefs = getSharedPreferences("sketchware_pro_x_prefs", Context.MODE_PRIVATE)
-        // Forzamos bienvenida para ver el cambio
-        val isFirstRun = true 
+        val isFirstRun = sharedPrefs.getBoolean("is_first_run", true)
 
         setContent {
             val themeController = remember {
@@ -40,8 +38,8 @@ class MainActivity : ComponentActivity() {
                     isDark = true,
                     darkColors = darkColorScheme(
                         primary = Color(0xFF007AFF),
-                        background = Color.Transparent, 
-                        surface = Color(0xCC000000), 
+                        background = Color.Transparent,
+                        surface = Color(0xCC000000),
                         surfaceVariant = Color(0x66111111),
                         onBackground = Color.White,
                         onSurface = Color.White,
@@ -50,29 +48,28 @@ class MainActivity : ComponentActivity() {
                 )
             }
 
-            // ANIMACIÓN CAMALEÓNICA GLOBAL (HyperOS 3)
             val infiniteTransition = rememberInfiniteTransition(label = "GlobalAnim")
             val color1 by infiniteTransition.animateColor(
-                initialValue = Color(0xFF1A0B2E), 
-                targetValue = Color(0xFF0D1B2A), 
+                initialValue = Color(0xFF1A0B2E),
+                targetValue = Color(0xFF0D1B2A),
                 animationSpec = infiniteRepeatable(tween(8000), RepeatMode.Reverse),
                 label = "C1"
             )
             val color2 by infiniteTransition.animateColor(
-                initialValue = Color(0xFF2C1B4E), 
-                targetValue = Color(0xFF001F3F), 
+                initialValue = Color(0xFF2C1B4E),
+                targetValue = Color(0xFF001F3F),
                 animationSpec = infiniteRepeatable(tween(12000), RepeatMode.Reverse),
                 label = "C2"
             )
             val animX by infiniteTransition.animateFloat(
-                initialValue = 0f, targetValue = 1f,
+                initialValue = 0f,
+                targetValue = 1f,
                 animationSpec = infiniteRepeatable(tween(15000), RepeatMode.Reverse),
                 label = "X"
             )
 
             MiuixTheme(controller = themeController) {
                 Box(modifier = Modifier.fillMaxSize().background(Color.Black)) {
-                    // FONDO DE MOVIMIENTO QUE ESTABA (RESTAURADO)
                     Canvas(modifier = Modifier.fillMaxSize()) {
                         drawRect(
                             brush = Brush.radialGradient(
@@ -85,7 +82,7 @@ class MainActivity : ComponentActivity() {
 
                     val navController = rememberNavController()
                     val startDestination = if (isFirstRun) "welcome" else "home"
-                    
+
                     NavHost(navController = navController, startDestination = startDestination) {
                         composable("welcome") {
                             WelcomeScreen(onStart = {

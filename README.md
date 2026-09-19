@@ -1,11 +1,104 @@
-# sketchware  Pro x
-Kotlin # 📱 Sketchware Pro X - Interactive Proyects  <p align="center">   <img src="https://raw.githubusercontent.com/tu-usuario/tu-repo/main/app/src/main/res/drawable/logo.png" width="150" alt="Sketchware Pro X Logo"> </p>  **Sketchware Pro X** es una evolución estética y funcional del clásico entorno de desarrollo Sketchware Pro. Esta versión ha sido rediseñada por **Interactive Proyects** utilizando el motor **MIUIX**, ofreciendo una experiencia visual inspirada en **HyperOS 3** con efectos de cristal líquido (Liquid Glass) y animaciones camaleónicas.  ---  ## ✨ Características Principales  - 🎨 **Interfaz HyperOS 3 Pro**: Fondo dinámico que cambia de color y reacciona al movimiento. - 💎 **Liquid Glass Design**: Todos los componentes utilizan el motor de desenfoque real (Real Blur) de MIUIX v0.9.3. - 🚀 **Editor Avanzado**:   - Pestañas funcionales: View, Event, Component y Code.   - Selección múltiple de imágenes y videos.   - Generación de archivos APK reales.   - Inyección de código Kotlin/Compose personalizado. - 📂 **Gestor de Proyectos**: Sistema de backup y restauración compatible con archivos `.swx`. - 📱 **Hardware Info**: Detección automática del dispositivo y versión del sistema.  ---  ## 📽️ Tutorial de Instalación Mira nuestro video de instrucciones para empezar a crear tus apps de inmediato
----  ## 🤝 Créditos y Reconocimientos  Este proyecto no sería posible sin el increíble trabajo de la comunidad de código abierto:  
-- **Sketchware Pro Team**: Por crear la base original y las herramientas de desarrollo móvil que todos amamos. Este proyecto es una versión modificada basada en su código fuente.
-- - **YuKongA (MIUIX)**: Por el espectacular framework de componentes de HyperOS para Jetpack Compose.
-  - - **ReChronoRain (HyperCeiler)**: Por la inspiración en la arquitectura de la interfaz y la pantalla de información.   ---  ## ⚖️ Licencia y Legal  **Sketchware Pro X** se distribuye bajo la **Licencia Apache 2.0**.   *Nota: Sketchware es una marca registrada de sus respectivos propietarios. Esta versión es un proyecto independiente creado por fans y para fans, con fines educativos y de personalización. Interactive Proyects no reclama la propiedad de las herramientas originales de Sketchware Pro.*
-    -  ---  ## 📱 Síguenos en nuestras Redes  ¡Únete a la comunidad de Interactive Proyects para recibir actualizaciones y soporte!
-    -  - 📱 **TikTok**: [@rebzyyx2026](https://www.tiktok.com/@rebzyyx2026?lang=es-419)
-       - - ✈️ **Telegram**: [Canal de Proyectos](https://t.me/+f_8BfcKX4C0xMzQx)
+# Sketchware Pro X
 
-                 --- <p align="center">   Creado con ❤️ por <b>Interactive Proyects</b> - 2026 </p>
+Sketchware Pro X es una aplicación Android construida con Jetpack Compose y MIUIX para crear prototipos, gestionar proyectos y explorar una experiencia visual inspirada en Sketchware.
+
+## Visión general
+
+La aplicación permite:
+
+- Crear y gestionar proyectos locales
+- Diseñar pantallas con componentes visuales
+- Añadir componentes no visuales como Intents, timers, diálogos y almacenamiento
+- Importar y exportar proyectos en formato `.swx`
+- Generar ideas de app con apoyo de IA cuando se configura una clave válida de Gemini
+- Explorar configuración, backup y navegación de archivos
+
+## Stack principal
+
+- Kotlin
+- Jetpack Compose
+- AndroidX Navigation
+- MIUIX UI / Theme
+- Media3 (video)
+- Coil (imágenes)
+- Gson (serialización)
+- Google Generative AI
+
+## Estructura del proyecto
+
+```text
+.
+├── app/
+│   ├── src/
+│   │   ├── androidTest/
+│   │   ├── main/
+│   │   │   ├── java/com/example/myapplication/
+│   │   │   ├── res/
+│   │   │   └── AndroidManifest.xml
+│   │   └── test/
+│   └── build.gradle.kts
+├── docs/
+│   ├── PROJECT_STRUCTURE.md
+│   └── DEVELOPMENT.md
+├── gradle/
+├── build.gradle.kts
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
+├── settings.gradle.kts
+├── LICENSE
+├── README.md
+├── .gitignore
+└── .idea/
+```
+
+## Requisitos
+
+- Android Studio Narwhal o posterior
+- JDK 17
+- Android SDK 34
+- Conexión a Internet para funciones que usen IA
+
+## Configuración rápida
+
+1. Clona este repositorio.
+2. Abre el proyecto en Android Studio.
+3. Crea un archivo `local.properties` si no existe.
+4. Añade una clave de Gemini para activar la IA:
+
+```properties
+GEMINI_API_KEY=tu_clave_aqui
+```
+
+5. Sincroniza Gradle y ejecuta la aplicación.
+
+## Uso recomendado
+
+- Empieza creando un proyecto desde la pantalla principal.
+- Explora el editor visual para añadir componentes.
+- Ajusta permisos y configuración de compilación desde la pantalla de ajustes.
+- Usa la generación con IA para proponer nombres de app y paquetes.
+- Exporta back-ups y restaura proyectos cuando lo necesites.
+
+## Documentación adicional
+
+- `docs/PROJECT_STRUCTURE.md`: resumen de la arquitectura y organización del proyecto.
+- `docs/DEVELOPMENT.md`: práctica recomendada y flujo de trabajo.
+
+## Limitaciones conocidas
+
+- La generación con IA requiere una clave válida de Gemini.
+- El sistema de archivos y permisos del dispositivo Android pueden afectar la importación y exportación de archivos.
+- El proyecto está orientado a prototipado visual y gestión de proyectos, no a un compilador completo de APK.
+
+## Licencia
+
+Este proyecto se distribuye bajo la licencia Apache 2.0.
+
+## Créditos
+
+Agradecimientos a la comunidad de Sketchware, MIUIX y al ecosistema Android que ha inspirado esta aplicación.
+
+---
+
+Proyecto mantenido por Interactive Proyects.
