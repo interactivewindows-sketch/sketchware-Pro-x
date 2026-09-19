@@ -1,7 +1,23 @@
+import java.io.File
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
 }
+
+val localProperties = Properties().apply {
+    val localPropertiesFile = File(rootDir, "local.properties")
+    if (localPropertiesFile.isFile) {
+        localPropertiesFile.inputStream().use { load(it) }
+    }
+}
+
+val geminiApiKey: String = localProperties.getProperty("GEMINI_API_KEY")
+    ?.trim()
+    ?.takeIf { it.isNotEmpty() }
+    ?: System.getenv("GEMINI_API_KEY")?.trim()?.takeIf { it.isNotEmpty() }
+    ?: ""
 
 android {
     namespace = "com.example.myapplication"
@@ -16,12 +32,7 @@ android {
 
         multiDexEnabled = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
-        buildConfigField(
-            "String",
-            "GEMINI_API_KEY",
-            "\"${project.findProperty("GEMINI_API_KEY") ?: ""}\""
-        )
+        buildConfigField("String", "GEMINI_API_KEY", "\"${geminiApiKey.replace("\\", "\\\\").replace("\"", "\\\"")}\"")
     }
 
     buildTypes {
@@ -47,6 +58,16 @@ android {
         compose = true
         buildConfig = true
     }
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
+kotlin {
+    jvmToolchain(17)
 }
 
 dependencies {
