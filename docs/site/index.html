@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sketchware Pro X</title>
+    <meta
+      name="description"
+      content="Sketchware Pro X — prototipado visual de proyectos Android con Jetpack Compose y MIUIX."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <nav class="nav container">
+          <div class="brand">
+            <span class="brand-mark">SP</span>
+            <span>Sketchware Pro X</span>
+          </div>
+          <div class="nav-links">
+            <a href="#overview">Proyecto</a>
+            <a href="#features">Características</a>
+            <a href="#gallery">Capturas</a>
+            <a href="#docs">Documentación</a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero container">
+          <div class="hero-copy">
+            <p class="eyebrow">Prototipado visual · Android · MIUIX</p>
+            <h1>Sketchware Pro X</h1>
+            <p class="lead">
+              Una experiencia de diseño y gestión de proyectos Android inspirada en Sketchware,
+              con un enfoque visual, modular y pensado para prototipado local.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button primary" href="#gallery">Ver capturas</a>
+              <a class="button secondary" href="../../README.md">Ver README</a>
+            </div>
+
+            <ul class="meta-list">
+              <li>Kotlin</li>
+              <li>Jetpack Compose</li>
+              <li>MIUIX</li>
+              <li>Android SDK 34</li>
+            </ul>
+          </div>
+
+          <div class="hero-art" aria-label="Vista previa del proyecto">
+            <div class="device-frame">
+              <div class="status-bar">
+                <span>9:41</span>
+                <span>▣ ▣ ▣</span>
+              </div>
+
+              <div class="device-screen">
+                <div class="app-card gradient-card highlight">
+                  <span class="mini-badge">Proyecto</span>
+                  <h3>Sketchware Pro X</h3>
+                  <div class="chart-bars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+
+                <div class="mini-grid">
+                  <div class="mini-tile"></div>
+                  <div class="mini-tile"></div>
+                  <div class="mini-tile"></div>
+                  <div class="mini-tile"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="overview" class="container section">
+          <div class="section-heading">
+            <p class="eyebrow">Presentación</p>
+            <h2>Un espacio para crear y organizar proyectos Android</h2>
+          </div>
+
+          <div class="summary-grid">
+            <article class="info-card">
+              <h3>Gestión local</h3>
+              <p>
+                El proyecto está pensado para crear, listar y gestionar proyectos de forma local,
+                manteniendo una experiencia visual y accesible.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>Editor visual</h3>
+              <p>
+                Incluye una estructura orientada a componentes visuales y no visuales para prototipado,
+                con una organización clara por pantallas y flujos de trabajo.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <h3>Interfaz MIUIX</h3>
+              <p>
+                Se trabaja con una estética oscura, moderna y cercana a la identidad visual de MIUIX,
+                con efectos visuales inspirados en interfaces avanzadas.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="features" class="container section">
+          <div class="section-heading">
+            <p class="eyebrow">Funciones</p>
+            <h2>Características actuales del proyecto</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-item">
+              <div class="feature-icon">01</div>
+              <h3>Proyectos</h3>
+              <p>Creación, almacenamiento y administración local de proyectos.</p>
+            </article>
+
+            <article class="feature-item">
+              <div class="feature-icon">02</div>
+              <h3>Editor</h3>
+              <p>Elementos visuales y no visuales para un prototipado más completo.</p>
+            </article>
+
+            <article class="feature-item">
+              <div class="feature-icon">03</div>
+              <h3>Configuración</h3>
+              <p>Opciones de ajustes, almacenamiento y exportación/importación.</p>
+            </article>
+
+            <article class="feature-item">
+              <div class="feature-icon">04</div>
+              <h3>IA opcional</h3>
+              <p>Integración de Gemini disponible solo con una clave local configurada.</p>
+            </article>
+
+            <article class="feature-item">
+              <div class="feature-icon">05</div>
+              <h3>Medios</h3>
+              <p>Soporte para reproducción de video y contenido visual dentro de la experiencia.</p>
+            </article>
+
+            <article class="feature-item">
+              <div class="feature-icon">06</div>
+              <h3>Documentación</h3>
+              <p>Repositorio estructurado y documentación técnica para facilitar el desarrollo.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="gallery" class="container section">
+          <div class="section-heading">
+            <p class="eyebrow">Capturas</p>
+            <h2>Espacios preparados para tus imágenes</h2>
+          </div>
+
+          <div class="gallery-grid">
+            <figure class="shot-card">
+              <div class="shot-frame">
+                <img src="../images/home-screen.png" alt="Pantalla principal" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');" />
+                <div class="shot-label">Pantalla principal</div>
+              </div>
+              <figcaption>docs/images/home-screen.png</figcaption>
+            </figure>
+
+            <figure class="shot-card">
+              <div class="shot-frame">
+                <img src="../images/project-editor.png" alt="Editor de proyectos" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');" />
+                <div class="shot-label">Editor de proyectos</div>
+              </div>
+              <figcaption>docs/images/project-editor.png</figcaption>
+            </figure>
+
+            <figure class="shot-card">
+              <div class="shot-frame">
+                <img src="../images/miuix-hyperos-interface.png" alt="Interfaz inspirada en HyperOS/MIUIX" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');" />
+                <div class="shot-label">HyperOS / MIUIX</div>
+              </div>
+              <figcaption>docs/images/miuix-hyperos-interface.png</figcaption>
+            </figure>
+
+            <figure class="shot-card">
+              <div class="shot-frame">
+                <img src="../images/project-setup-ai.png" alt="Configuración o generación de proyectos" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');" />
+                <div class="shot-label">Generación / configuración</div>
+              </div>
+              <figcaption>docs/images/project-setup-ai.png</figcaption>
+            </figure>
+
+            <figure class="shot-card">
+              <div class="shot-frame">
+                <img src="../images/welcome-screen.png" alt="Pantalla de bienvenida" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');" />
+                <div class="shot-label">Pantalla de bienvenida</div>
+              </div>
+              <figcaption>docs/images/welcome-screen.png</figcaption>
+            </figure>
+
+            <figure class="shot-card">
+              <div class="shot-frame">
+                <img src="../images/settings-screen.png" alt="Pantalla de ajustes" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');" />
+                <div class="shot-label">Ajustes</div>
+              </div>
+              <figcaption>docs/images/settings-screen.png</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="docs" class="container section docs-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Documentación</p>
+            <h2>Recursos del proyecto</h2>
+          </div>
+
+          <div class="docs-grid">
+            <a class="doc-card" href="../../README.md">
+              <span>README</span>
+              <strong>Descripción del proyecto</strong>
+            </a>
+
+            <a class="doc-card" href="../../docs/PROJECT_STRUCTURE.md">
+              <span>Estructura</span>
+              <strong>Arquitectura y organización</strong>
+            </a>
+
+            <a class="doc-card" href="../../docs/DEVELOPMENT.md">
+              <span>Desarrollo</span>
+              <strong>Configuración y flujo de trabajo</strong>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <p>Sketchware Pro X</p>
+          <p>Proyecto mantenido por Interactive Proyects.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
