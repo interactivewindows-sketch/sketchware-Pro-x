@@ -1,34 +1,47 @@
 # Sketchware Pro X
 
 <p align="center">
-  <img src="https://github.com/interactivewindows-sketch/sketchware-Pro-x/blob/main/assets/banner.png?raw=true" alt="Sketchware Pro X banner" width="900" />
+  <img src="https://raw.githubusercontent.com/interactivewindows-sketch/sketchware-Pro-x/main/assets/banner.png" alt="Sketchware Pro X banner" width="900" />
 </p>
 
-Sketchware Pro X es un proyecto orientado a ofrecer una experiencia moderna, visual y personalizable para crear aplicaciones Android con una base inspirada en Sketchware, ampliada con funcionalidades avanzadas y una experiencia más limpia para desarrolladores y creadores.
+<p align="center">
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin" alt="Kotlin" />
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android" alt="Android" />
+  <img src="https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle" alt="Gradle" />
+  <img src="https://img.shields.io/badge/License-Apache%202.0-blue?style=for-the-badge" alt="Apache 2.0" />
+  <img src="https://img.shields.io/badge/Status-In%20development-orange?style=for-the-badge" alt="Status" />
+</p>
+
+Sketchware Pro X es un proyecto Android pensado para ofrecer una experiencia moderna, flexible y visual para crear aplicaciones interactivas con una base inspirada en Sketchware, mejorada con una estructura más ordenada y una visión más profesional.
 
 ## 🎯 Objetivo del proyecto
 
-El objetivo principal es facilitar la creación de apps móviles con una estructura más ordenada, mejor estética visual y opciones de personalización para proyectos interactivos, prototipos y herramientas Android avanzadas.
+El objetivo principal es crear una base sólida para desarrollar aplicaciones móviles con:
+
+- una interfaz más moderna
+- una estructura más mantenible
+- una experiencia más limpia para el usuario final
+- posibilidad de ampliar funcionalidades sin romper la base existente
 
 ## ✨ Características
 
-- Interfaz moderna y personalizada
-- Desarrollo enfocado en apps Android
-- Soporte para proyectos interactivos
-- Estructura modular para crecimiento del proyecto
-- Base preparada para mejoras continuas y nuevas funciones
-- Código pensado para ser escalable y mantenible
+- Interfaz moderna y personalizable
+- Desarrollo centrado en Android y Kotlin
+- Base preparada para experiencias interactivas
+- Estructura modular y escalable
+- Enfoque en proyectos creativos y funcionales
+- Código preparado para crecer con nuevas funciones
 
 ## 🧩 Stack tecnológico
 
 - Kotlin
 - Android SDK
-- Jetpack Compose / componentes modernos
 - Gradle
 - Material Design
-- Arquitectura Android modular
+- Jetpack / componentes modernos
+- Arquitectura Android pensada para escalar
 
-## 📁 Estructura del proyecto
+## 📁 Estructura recomendada del proyecto
 
 ```text
 sketchware-Pro-x/
@@ -48,7 +61,8 @@ sketchware-Pro-x/
 ├── settings.gradle.kts
 ├── README.md
 ├── LICENSE
-└── .gitignore
+├── .gitignore
+└── gradle.properties
 ```
 
 ## 🚀 Instalación
@@ -64,50 +78,58 @@ cd sketchware-Pro-x
 
 3. Sincroniza Gradle y espera a que termine la carga de dependencias.
 
-4. Ejecuta la app en un emulador o dispositivo Android.
+4. Ejecuta la aplicación en un emulador o dispositivo Android.
 
 ## 🛠️ Requisitos
 
 - Android Studio latest
 - JDK 17+
 - Android SDK
-- Conexión a internet para sincronizar dependencias
+- Gradle sincronizado correctamente
 
 ## 🧪 Estado del proyecto
 
-Actualmente este proyecto se encuentra en desarrollo activo. Se mejoran funcionalidades, estructura y experiencia visual.
+Este repositorio se encuentra en desarrollo activo.
 
-## �� Capturas
+Actualmente se están mejorando:
 
-> Añade aquí capturas reales del proyecto para que se vea más profesional.
+- la estructura del proyecto
+- la documentación
+- la identidad visual
+- la modularidad
+- la base técnica para futuras versiones
+
+## 📸 Capturas
+
+> Añade aquí capturas reales del proyecto para que la presentación visual del repositorio sea más profesional.
 
 ## 🧭 Roadmap
 
 - [ ] Mejorar la estructura interna del proyecto
 - [ ] Definir módulos claros para lógica y UI
-- [ ] Añadir más componentes reutilizables
-- [ ] Mejorar documentación de uso
+- [ ] Añadir componentes reutilizables
+- [ ] Mejorar la documentación de uso
 - [ ] Añadir pruebas automatizadas
-- [ ] Preparar versión estable y publicable
+- [ ] Preparar una versión más estable para publicación
 
 ## 🤝 Créditos
 
-Este proyecto no sería posible sin la comunidad de código abierto y sin el trabajo de distintas herramientas, librerías y proyectos que inspiraron su desarrollo.
+Este proyecto se inspira en la comunidad de desarrollo Android y en la innovación constante del software libre. Se reconoce el valor de la comunidad, las librerías, herramientas y proyectos que han servido como base para ideas, inspiración y crecimiento técnico.
 
 ## 📜 Licencia
 
 Este proyecto está bajo la licencia Apache License 2.0.
 
-## 👥 Comunidad
+## 👥 Comunidad y contacto
 
-Únete a la comunidad de proyectos interactivos de Interactive Proyectos para recibir actualizaciones, soporte y novedades.
+Únete a la comunidad de proyectos interactivos de Interactive Proyects para recibir novedades, soporte y actualizaciones.
 
 - Telegram: https://t.me/+f_8BfcKX4C0xMzQx
 - TikTok: https://www.tiktok.com/@rebzyyx2026?lang=es-419
 
-## 📝 Nota
+## 📝 Nota final
 
-Este repositorio está en evolución. Si quieres participar, mejorar la arquitectura, añadir funciones o corregir errores, puedes colaborar abriendo issues o proponiendo cambios.
+Este repositorio está en evolución. La idea es convertirlo en un proyecto más profesional, con mejor estructura, documentación y claridad técnica.
 
 <p align="center">
   <b>Creado con ❤️ por Interactive Proyects</b>
