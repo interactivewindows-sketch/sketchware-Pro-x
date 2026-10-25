@@ -1,11 +1,114 @@
-# sketchware  Pro x
-Kotlin # 📱 Sketchware Pro X - Interactive Proyects  <p align="center">   <img src="https://raw.githubusercontent.com/tu-usuario/tu-repo/main/app/src/main/res/drawable/logo.png" width="150" alt="Sketchware Pro X Logo"> </p>  **Sketchware Pro X** es una evolución estética y funcional del clásico entorno de desarrollo Sketchware Pro. Esta versión ha sido rediseñada por **Interactive Proyects** utilizando el motor **MIUIX**, ofreciendo una experiencia visual inspirada en **HyperOS 3** con efectos de cristal líquido (Liquid Glass) y animaciones camaleónicas.  ---  ## ✨ Características Principales  - 🎨 **Interfaz HyperOS 3 Pro**: Fondo dinámico que cambia de color y reacciona al movimiento. - 💎 **Liquid Glass Design**: Todos los componentes utilizan el motor de desenfoque real (Real Blur) de MIUIX v0.9.3. - 🚀 **Editor Avanzado**:   - Pestañas funcionales: View, Event, Component y Code.   - Selección múltiple de imágenes y videos.   - Generación de archivos APK reales.   - Inyección de código Kotlin/Compose personalizado. - 📂 **Gestor de Proyectos**: Sistema de backup y restauración compatible con archivos `.swx`. - 📱 **Hardware Info**: Detección automática del dispositivo y versión del sistema.  ---  ## 📽️ Tutorial de Instalación Mira nuestro video de instrucciones para empezar a crear tus apps de inmediato
----  ## 🤝 Créditos y Reconocimientos  Este proyecto no sería posible sin el increíble trabajo de la comunidad de código abierto:  
-- **Sketchware Pro Team**: Por crear la base original y las herramientas de desarrollo móvil que todos amamos. Este proyecto es una versión modificada basada en su código fuente.
-- - **YuKongA (MIUIX)**: Por el espectacular framework de componentes de HyperOS para Jetpack Compose.
-  - - **ReChronoRain (HyperCeiler)**: Por la inspiración en la arquitectura de la interfaz y la pantalla de información.   ---  ## ⚖️ Licencia y Legal  **Sketchware Pro X** se distribuye bajo la **Licencia Apache 2.0**.   *Nota: Sketchware es una marca registrada de sus respectivos propietarios. Esta versión es un proyecto independiente creado por fans y para fans, con fines educativos y de personalización. Interactive Proyects no reclama la propiedad de las herramientas originales de Sketchware Pro.*
-    -  ---  ## 📱 Síguenos en nuestras Redes  ¡Únete a la comunidad de Interactive Proyects para recibir actualizaciones y soporte!
-    -  - 📱 **TikTok**: [@rebzyyx2026](https://www.tiktok.com/@rebzyyx2026?lang=es-419)
-       - - ✈️ **Telegram**: [Canal de Proyectos](https://t.me/+f_8BfcKX4C0xMzQx)
+# Sketchware Pro X
 
-                 --- <p align="center">   Creado con ❤️ por <b>Interactive Proyects</b> - 2026 </p>
+<p align="center">
+  <img src="https://github.com/interactivewindows-sketch/sketchware-Pro-x/blob/main/assets/banner.png?raw=true" alt="Sketchware Pro X banner" width="900" />
+</p>
+
+Sketchware Pro X es un proyecto orientado a ofrecer una experiencia moderna, visual y personalizable para crear aplicaciones Android con una base inspirada en Sketchware, ampliada con funcionalidades avanzadas y una experiencia más limpia para desarrolladores y creadores.
+
+## 🎯 Objetivo del proyecto
+
+El objetivo principal es facilitar la creación de apps móviles con una estructura más ordenada, mejor estética visual y opciones de personalización para proyectos interactivos, prototipos y herramientas Android avanzadas.
+
+## ✨ Características
+
+- Interfaz moderna y personalizada
+- Desarrollo enfocado en apps Android
+- Soporte para proyectos interactivos
+- Estructura modular para crecimiento del proyecto
+- Base preparada para mejoras continuas y nuevas funciones
+- Código pensado para ser escalable y mantenible
+
+## 🧩 Stack tecnológico
+
+- Kotlin
+- Android SDK
+- Jetpack Compose / componentes modernos
+- Gradle
+- Material Design
+- Arquitectura Android modular
+
+## 📁 Estructura del proyecto
+
+```text
+sketchware-Pro-x/
+├── app/
+│   ├── src/
+│   ├── build.gradle.kts
+│   └── proguard-rules.pro
+├── core/
+│   └── src/
+├── ui/
+│   └── src/
+├── assets/
+│   └── images/
+├── docs/
+│   └── guides/
+├── build.gradle.kts
+├── settings.gradle.kts
+├── README.md
+├── LICENSE
+└── .gitignore
+```
+
+## 🚀 Instalación
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/interactivewindows-sketch/sketchware-Pro-x.git
+cd sketchware-Pro-x
+```
+
+2. Abre el proyecto en Android Studio.
+
+3. Sincroniza Gradle y espera a que termine la carga de dependencias.
+
+4. Ejecuta la app en un emulador o dispositivo Android.
+
+## 🛠️ Requisitos
+
+- Android Studio latest
+- JDK 17+
+- Android SDK
+- Conexión a internet para sincronizar dependencias
+
+## 🧪 Estado del proyecto
+
+Actualmente este proyecto se encuentra en desarrollo activo. Se mejoran funcionalidades, estructura y experiencia visual.
+
+## �� Capturas
+
+> Añade aquí capturas reales del proyecto para que se vea más profesional.
+
+## 🧭 Roadmap
+
+- [ ] Mejorar la estructura interna del proyecto
+- [ ] Definir módulos claros para lógica y UI
+- [ ] Añadir más componentes reutilizables
+- [ ] Mejorar documentación de uso
+- [ ] Añadir pruebas automatizadas
+- [ ] Preparar versión estable y publicable
+
+## 🤝 Créditos
+
+Este proyecto no sería posible sin la comunidad de código abierto y sin el trabajo de distintas herramientas, librerías y proyectos que inspiraron su desarrollo.
+
+## 📜 Licencia
+
+Este proyecto está bajo la licencia Apache License 2.0.
+
+## 👥 Comunidad
+
+Únete a la comunidad de proyectos interactivos de Interactive Proyectos para recibir actualizaciones, soporte y novedades.
+
+- Telegram: https://t.me/+f_8BfcKX4C0xMzQx
+- TikTok: https://www.tiktok.com/@rebzyyx2026?lang=es-419
+
+## 📝 Nota
+
+Este repositorio está en evolución. Si quieres participar, mejorar la arquitectura, añadir funciones o corregir errores, puedes colaborar abriendo issues o proponiendo cambios.
+
+<p align="center">
+  <b>Creado con ❤️ por Interactive Proyects</b>
+</p>
